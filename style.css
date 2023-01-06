@@ -1,6 +1,6 @@
 html {
     background-color: #303030;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, h1 a {
@@ -15,8 +15,30 @@ h1 a {
     text-decoration: none;
 }
 
+body {
+    margin: 0px;
+}
+
+div {
+    margin: 8px;
+}
+
+h1.title-bar {
+    margin: 0px;
+    padding: 8px;
+}
+
 .accent {
     background-color: #505050;
+    margin: 0px;
+}
+
+.albums, .track-listing {
+    padding: 8px;
+}
+
+.albums h3, .track-listing ol {
+    margin: 0px;
 }
 
 .track-length {
