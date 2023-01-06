@@ -42,5 +42,6 @@ h1.title-bar {
 }
 
 .track-length {
+    display: inline-block;
     color: lightsalmon;
 }
