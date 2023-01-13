@@ -29,7 +29,9 @@ body {
 .info {
     background-color: #303030;
     flex: 1;
-    padding: 16px;
+    padding: 48px;
+    display: flex;
+    gap: 32px;
 }
 
 .logo {
@@ -49,16 +51,39 @@ img.album {
     height: 300px;
 }
 
-.aotw {
+.section {
     display: flex;
     gap: 16px;
 }
 
-.aotw div {
+.section div {
     display: flex;
     flex-direction: column;
 }
 
-.aotw div h3 {
+.section div h3, .sidebar .section h3 {
     color: gold;
+    margin: 0px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.sidebar .section {
+    display: flex;
+    flex-direction: column;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 32px;
+}
+
+.recent-releases {
+    justify-content: space-between;
 }
