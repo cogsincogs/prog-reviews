@@ -1,47 +1,64 @@
-html {
-    background-color: #303030;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-html, h1 a {
-    color: #DDDDDD;
-}
-
-a {
-    color: #70AAFF
-}
-
-h1 a {
-    text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
 
 body {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: stretch;
+    color: #eeeeee;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
-div {
-    margin: 8px;
+.content {
+    max-width: 1200px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-h1.title-bar {
-    margin: 0px;
-    padding: 8px;
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex: 0 0 auto;
 }
 
-.accent {
-    background-color: #505050;
-    margin: 0px;
+.info {
+    background-color: #303030;
+    flex: 1;
+    padding: 16px;
 }
 
-.albums, .track-listing {
-    padding: 8px;
+.logo {
+    font-size: 24px;
+    font-weight: 900;
 }
 
-.albums h3, .track-listing ol {
-    margin: 0px;
+ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 16px;
 }
 
-.track-length {
-    display: inline-block;
-    color: lightsalmon;
+img.album {
+    width: 300px;
+    height: 300px;
+}
+
+.aotw {
+    display: flex;
+    gap: 16px;
+}
+
+.aotw div {
+    display: flex;
+    flex-direction: column;
+}
+
+.aotw div h3 {
+    color: gold;
 }
