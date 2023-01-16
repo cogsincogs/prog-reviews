@@ -26,6 +26,11 @@ body {
     flex: 0 0 auto;
 }
 
+.header .links li a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
 .info {
     background-color: #303030;
     flex: 1;
