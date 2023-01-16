@@ -14,6 +14,8 @@ $sql = "INSERT INTO `tbl_contact` (`fldName`, `fldEmail`, `fldMessage`) VALUES (
 // Query database and store response in $rs
 $rs = mysqli_query($con, $sql);
 
-header('Location: contact.html');
+if (!$name) {
+    echo "PHP file not detecting form data!";
+}
 
 ?>
