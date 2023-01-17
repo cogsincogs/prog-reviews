@@ -26,7 +26,7 @@ body {
     flex: 0 0 auto;
 }
 
-.header .links li a {
+.header .links li a, .logo a {
     text-decoration: none;
     color: #eeeeee;
 }

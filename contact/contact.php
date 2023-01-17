@@ -11,7 +11,4 @@ if (!empty($_POST)) {
     $dbh->setMessage($name, $email, $message);
 }
 
-$albums = $dbh->getAlbums();
-echo json_encode($albums);
-
 ?>
