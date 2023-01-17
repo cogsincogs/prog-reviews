@@ -1,21 +1,29 @@
 <?php 
+var_dump($_POST);
 
-// Store database connection in $con variable
-$con = mysqli_connect("localhost", "root", "", "db_progreviews");
-
-// Store received input from form in local variables
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
 $message = htmlspecialchars($_POST['message']);
 
-// Store SQL query into $sql
-$sql = "INSERT INTO `tbl_contact` (`fldName`, `fldEmail`, `fldMessage`) VALUES ('$name', '$email', '$message');";
+$host = "localhost";
+$user = "root";
+$psw = "";
+$dbname = "db_progreviews";
 
-// Query database and store response in $rs
-$rs = mysqli_query($con, $sql);
+$dsn = "mysql:host=$host;dbname=$dbname;charset=utf8";
 
-if (!$name) {
-    echo "PHP file not detecting form data!";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $psw, $options);
+} catch (PDOException $Exception) {
+    throw new DatabaseConnectionException($Exception->getMessage());
 }
+
+$statement = $pdo->prepare("INSERT INTO tbl_contact (fldName, fldEmail, fldMessage) VALUES (?, ?, ?);");
+$statement->execute([$name, $email, $message]);
 
 ?>
