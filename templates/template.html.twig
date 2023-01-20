@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prog Reviews</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <div class="content">
         <div class="header">
-            <div class="logo"><a href="./index.html">Prog Reviews</a></div>
+            <div class="logo"><a href="/">Prog Reviews</a></div>
             <ul class="links">
                 <li>Music</li> <!-- Will eventually be a dropdown with albums as an option -->
-                <li><a href="./genres/">Genres</a></li>
+                <li><a href="/genres/">Genres</a></li>
                 <li>About</li>
-                <li><a href="./contact/">Contact</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
         </div>
         <div class="info">
             <div class="sections">
-                <div class="aotw section">
-                    <img class="album" src="./images/cavalcade.png" alt="Black Midi - Cavalcade">
-                    <div>
-                        <h3>Album of the Week</h3>
-                        <p>Here would be a review of the album of the week.</p>
-                    </div>
-                </div>
-                <div class="recent-releases section">
-                    <div>
-                        <h3>Recent Releases</h3>
-                        <p>Here would be a list of recent album releases.</p>
-                    </div>
-                    <img class="album" src="./images/cavalcade.png" alt="Black Midi - Cavalcade">
-                </div>
+                {% block content %} {% endblock %}
             </div>
             <div class="sidebar">
                 <div class="recent-activity section">
@@ -47,5 +34,10 @@
             </div>
         </div>
     </div>
+    {% if scripts %}
+        {% for script in scripts %}
+            <script src="{{ script }}"></script>
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
