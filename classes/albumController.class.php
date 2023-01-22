@@ -1,6 +1,6 @@
 <?php
 
-include "dbh.class.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/classes/dbh.class.php";
 
 class AlbumController extends Dbh {
     public function getAlbums() {

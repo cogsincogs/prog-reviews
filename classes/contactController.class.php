@@ -1,6 +1,6 @@
 <?php
 
-include 'dbh.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/classes/dbh.class.php';
 
 class ContactController extends Dbh {
     public function setMessage($name, $email, $message){

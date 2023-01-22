@@ -13,14 +13,14 @@
             <div class="logo"><a href="/">Prog Reviews</a></div>
             <ul class="links">
                 <li>Music</li> <!-- Will eventually be a dropdown with albums as an option -->
-                <li><a href="/genres/">Genres</a></li>
+                <li>Genres</li>
                 <li>About</li>
                 <li><a href="/contact/">Contact</a></li>
             </ul>
         </div>
         <div class="info">
             <div class="sections">
-                {% block content %} {% endblock %}
+                {% block content %}{% endblock %}
             </div>
             <div class="sidebar">
                 <div class="recent-activity section">
@@ -29,7 +29,11 @@
                 </div>
                 <div class="genres section">
                     <h3>Genres</h3>
-                    <p>Here would be a list of genres available on the site. Test 1</p>
+                    <ul>
+                        {% for genre in genres %}
+                            <li>{{ genre }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>

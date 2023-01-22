@@ -1,5 +1,5 @@
 <?php 
-include '../classes/contactController.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/classes/contactController.class.php';
 
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);

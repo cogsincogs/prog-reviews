@@ -1,5 +1,5 @@
 <?php 
-include '../classes/albumController.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/classes/albumController.class.php';
 
 $title = htmlspecialchars($_POST['title']);
 $artist = htmlspecialchars($_POST['artist']);
