@@ -17,22 +17,9 @@ class Dbh {
         try {
             $pdo = new PDO($dsn, $this->user, $this->psw, $options);
         } catch (PDOException $Exception) {
-            throw new DatabaseConnectionException($Exception->getMessage());
+            echo "PDO Error: " . $Exception->getMessage();
         }
         
         return $pdo;
-    }
-
-    public function getAlbums() {
-        $sql = "SELECT * FROM tbl_albums";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
-    public function setMessage($name, $email, $message){
-        $sql = "INSERT INTO tbl_contact (fldName, fldEmail, fldMessage) VALUES (?, ?, ?);";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$name, $email, $message]);
     }
 }

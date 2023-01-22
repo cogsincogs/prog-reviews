@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albums - Prog Reviews</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <div class="content">
         <div class="header">
-            <div class="logo"><a href="../index.html">Prog Reviews</a></div>
+            <div class="logo"><a href="/">Prog Reviews</a></div>
             <ul class="links">
-                <li><a href="./albums.html">Music</a></li> <!-- Will eventually be a dropdown with albums as an option -->
+                <li>Music</li> <!-- Will eventually be a dropdown with albums as an option -->
                 <li>Genres</li>
                 <li>About</li>
-                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
         </div>
         <div class="info">
             <div class="sections">
-                
+                {% block content %}{% endblock %}
             </div>
             <div class="sidebar">
                 <div class="recent-activity section">
@@ -29,11 +29,19 @@
                 </div>
                 <div class="genres section">
                     <h3>Genres</h3>
-                    <p>Here would be a list of genres available on the site</p>
+                    <ul>
+                        {% for genre in genres %}
+                            <li>{{ genre }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./albums.js"></script>
+    {% if scripts %}
+        {% for script in scripts %}
+            <script src="{{ script }}"></script>
+        {% endfor %}
+    {% endif %}
 </body>
 </html>

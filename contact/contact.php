@@ -1,11 +1,11 @@
 <?php 
-include '../classes/dbh.class.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/classes/contactController.class.php';
 
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
 $message = htmlspecialchars($_POST['message']);
 
-$dbh = new Dbh();
+$dbh = new ContactController();
 
 if (!empty($_POST)) {
     $dbh->setMessage($name, $email, $message);

@@ -44,7 +44,7 @@ body {
     font-weight: 900;
 }
 
-ul {
+ul.links {
     list-style-type: none;
     padding: 0px;
     display: flex;

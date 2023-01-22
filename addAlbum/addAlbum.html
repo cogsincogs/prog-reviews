@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add album - Prog Reviews</title>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo"><a href="../index.html">Prog Reviews</a></div>
+            <ul class="links">
+                <li>Music</li> <!-- Will eventually be a dropdown with albums as an option -->
+                <li>Genres</li>
+                <li>About</li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <div class="sections">
+                <fieldset>
+                    <legend class="title">Add Album</legend>
+                    <form class="add-album" method="post">
+                        <label for="title">Album title:</label><br>
+                        <input type="text" id="title" name="title"><br>
+                        <label for="artist">Artist:</label><br>
+                        <input type="text" id="artist" name="artist"><br>
+                        <label for="year">Year:</label><br>
+                        <input type="number" min="1900" max="2100" id="year" name="year"><br>
+                        <label for="genre">Genre:</label><br>
+                        <input type="text" id="genre" name="genre"><br>
+                        <label for="tracks">Tracks:</label><br>
+                        <input type="number" min="1" max="1000" id="tracks" name="tracks"><br>
+                        <label for="url">Image URL:</label><br>
+                        <input type="url" id="url" name="url"><br>
+                        <label for="rating">Rating:</label><br>
+                        <input type="number" min="1" max="10" id="rating" name="rating"><br><br>
+                        <input type="submit" name="Submit" value="Submit">
+                    </form>
+                </fieldset>
+            </div>
+            <div class="sidebar">
+                <div class="recent-activity section">
+                    <h3>Recent Activity</h3>
+                    <p>Here would be a list of recent activity by the site's users</p>
+                </div>
+                <div class="genres section">
+                    <h3>Genres</h3>
+                    <p>Here would be a list of genres available on the site</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./addAlbum.js"></script>
+</body>
+</html>
