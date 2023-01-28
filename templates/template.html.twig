@@ -14,8 +14,8 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <div class="content">
-        <div class="header">
+    <div class="header">
+        <div class="header-container">
             <div class="logo"><a href="/">Prog Reviews</a></div>
             <ul class="links">
                 <li>Music</li> <!-- Will eventually be a dropdown with albums as an option -->
@@ -24,22 +24,26 @@
                 <li><a href="/contact/">Contact</a></li>
             </ul>
         </div>
-        <div class="info">
-            <div class="sections">
-                {% block content %}{% endblock %}
-            </div>
-            <div class="sidebar">
-                <div class="recent-activity section">
-                    <h3>Recent Activity</h3>
-                    <p>Here would be a list of recent activity by the site's users</p>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="info">
+                <div class="sections">
+                    {% block content %}{% endblock %}
                 </div>
-                <div class="genres section">
-                    <h3>Genres</h3>
-                    <ul>
-                        {% for genre in genres %}
-                            <li>{{ genre }}</li>
-                        {% endfor %}
-                    </ul>
+                <div class="sidebar">
+                    <div class="recent-activity section">
+                        <h3>Recent Activity</h3>
+                        <p>Here would be a list of recent activity by the site's users</p>
+                    </div>
+                    <div class="genres section">
+                        <h3>Genres</h3>
+                        <ul>
+                            {% for genre in genres %}
+                                <li>{{ genre }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
