@@ -19,7 +19,16 @@
             <div class="logo"><a href="/">Prog Reviews</a></div>
             <ul class="links">
                 <a href="#"><li>Music</li></a> <!-- Will eventually be a dropdown with albums as an option -->
-                <a href="#"><li>Genres</li></a>
+                <div class="dropdown">
+                    <a href="#"><li>Genres</li></a>
+                    <div class="dropdown-content">
+                        <ul class="genres">
+                            {% for genre in genres %}
+                                <li>{{ genre }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
                 <a href="#"><li>About</li></a>
                 <a href="/contact/"><li>Contact</li></a>
             </ul>
@@ -35,14 +44,6 @@
                     <div class="recent-activity section">
                         <h3>Recent Activity</h3>
                         <p>Here would be a list of recent activity by the site's users</p>
-                    </div>
-                    <div class="genres section">
-                        <h3>Genres</h3>
-                        <ul>
-                            {% for genre in genres %}
-                                <li>{{ genre }}</li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
             </div>
