@@ -12,6 +12,6 @@ $twig = new Environment($loader);
 
 $title = "Contact me - Prog Reviews";
 $genres = getGenres();
-$scripts = [$_SERVER['DOCUMENT_ROOT'] . "/contact/contact.js"];
+$scripts = ["/contact/contact.js"];
 
 echo $twig->render('contact.html.twig', ['title' => $title, 'genres' => $genres, 'scripts' => $scripts]);
