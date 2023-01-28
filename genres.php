@@ -14,5 +14,6 @@ function getGenres() {
             array_push($result, $g);
         }
     }
+    sort($result);
     return $result;
 }

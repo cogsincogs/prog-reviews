@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
 
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
-    background-color: black;
+    flex-direction: column;
+    background-color: #151515;
     justify-content: center;
     align-items: stretch;
     color: #eeeeee;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    height: 100%;
 }
 
 .content {
@@ -20,13 +33,23 @@ body {
 .header {
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 16px;
     flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.header .links li a, .logo a {
+.header-container {
+    max-width: 1200px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .links a, .logo a {
     text-decoration: none;
     color: #eeeeee;
 }
@@ -41,6 +64,33 @@ body {
     background-color: #151515;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #151515;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ul.genres {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.dropdown-content ul.genres li {
+    background-color: #151515;
+}
+
 .info {
     background-color: #303030;
     flex: 1;
@@ -52,6 +102,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: 900;
+    margin: 0px 8px;
 }
 
 ul.links {
