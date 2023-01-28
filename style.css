@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 
-.header .links li a, .logo a {
+.header .links a, .logo a {
     text-decoration: none;
     color: #eeeeee;
 }
